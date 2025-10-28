@@ -1,0 +1,43 @@
+/* Simple responsive starter styles — edit as you like */
+:root{
+  --bg:#f7f7fb;--card:#ffffff;--text:#1f2937;--muted:#6b7280;--accent:#2563eb;
+  --maxw:1000px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;
+}
+.container{width:calc(100% - 40px);max-width:var(--maxw);margin:0 auto;padding:24px;}
+.site-header{background:white;border-bottom:1px solid #e6e9ef;}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;}
+.logo{font-weight:700;text-decoration:none;color:var(--text);font-size:1.1rem}
+.nav a{margin-left:18px;text-decoration:none;color:var(--muted);font-weight:600}
+.hero{padding:36px 0}
+.hero h1{margin:0;font-size:2rem}
+.hero p{color:var(--muted);max-width:70%}
+.btn{display:inline-block;padding:10px 14px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;margin-right:8px}
+.btn.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+.spotlight{margin-top:28px}
+.card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.06);margin-bottom:12px}
+.card-grid{display:flex;gap:12px;flex-wrap:wrap}
+.card.small{flex:1;min-width:200px}
+.avatar{width:120px;height:120px;border-radius:12px;object-fit:cover;display:block;margin-bottom:12px}
+.profile-intro{display:flex;gap:24px;align-items:flex-start}
+.chips{list-style:none;padding:0;display:flex;gap:8px}
+.chips li{background:white;padding:8px 10px;border-radius:999px;border:1px solid #eef2ff;font-weight:600}
+.timeline{padding-left:16px}
+.gallery{display:flex;gap:12px;flex-wrap:wrap}
+.work{background:white;padding:8px;border-radius:12px;overflow:hidden;width: calc(50% - 6px)}
+.work img{width:100%;height:150px;object-fit:cover;display:block}
+.form label{display:block;margin-bottom:10px}
+.form input,.form textarea{width:100%;padding:8px;border-radius:8px;border:1px solid #e6e9ef}
+.site-footer{margin-top:36px;padding:20px 0;text-align:center;color:var(--muted)}
+.muted{color:var(--muted)}
+@media (max-width:700px){
+  .hero p{max-width:100%}
+  .profile-intro{flex-direction:column;align-items:center;text-align:center}
+  .nav{display:none}
+  .work{width:100%}
+}
